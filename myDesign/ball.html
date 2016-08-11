@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Just a ball</title>
+</head>
+<body>
+
+
+<style>
+	#stage{
+		perspective:800px;
+	}
+	.box{position:relative;width:600px;height:600px;border-radius:100%;margin:auto;
+ 		animation:round 1s infinite linear; 
+		transform:rotateZ(90deg);
+		transform-style:preserve-3d;
+	}
+	.ball{position:absolute;top:500px;left:250px;width:100px;height:100px;border-radius:100%;
+		background:radial-gradient( at 100px 0px,white,black);
+		animation:ballround 3s ease-in-out infinite;
+		transition:all 1s linear;
+	}
+	.linear{
+		width:1px ;height:200px;position:absolute;top:300px;left:300px;background:black;
+	}
+	   @keyframes round{
+		0%{transform:rotateY(0deg);}
+		50%{transform:rotateY(180deg);}
+		100%{transform:rotateY(360deg);}
+	}   
+	/* @keyframes ballround{
+		0%{background:radial-gradient( at 100px 0px,white,black);}
+		25%{background:radial-gradient( at 0px 0px,white,black);}
+		50%{background:black;}
+		75%{background:radial-gradient( at 200px 0px,white,black);}
+		100%{background:radial-gradient( at 100px 0px,white,black);}
+	} */
+</style>
+<div id="stage"> 
+	<div class="box">
+		<div class="linear"></div>
+		<div class="ball"></div>
+		<div class="ball" style="transform:rotateX(90deg);"></div>
+		<div class="ball" style="transform:rotateY(90deg);"></div>
+	</div>
+</div>
+
+
+</body>
+</html>

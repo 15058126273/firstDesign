@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+	<meta charset="UTF-8">
+	<title>世界上最美的女孩 -- Best girl in the world</title>
+	<link rel="SHORTCUT ICON" href="common/images/temp/love_logo.png"> 
+	<link type="text/css" rel="stylesheet" href="common/css/index.css">
+	<script src="common/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="common/js/nomenu.js"></script>
+	<script type="text/javascript" src="common/js/console.js"></script>
+	</head>
+	<body>
+		<!-- 生命时间模块 -->
+		<div class="css1" id="lifeTime"></div>
+		<img src="common/images/temp/love.png" id="heart_img" class="heart_img">
+		<!-- 九宫图 -->
+		<div class="css2">
+			<div class="css3 now_border" index="0" style="background:url('common/images/temp/lb5.png');background-size:100% 100%;"></div>
+			<div class="css3" index="1" style="background:url('common/images/temp/lb6.png');background-size:100% 100%;"></div>
+			<div class="css3" index="2" style="background:url('common/images/temp/lb7.png');background-size:100% 100%;"></div>
+			<div class="css3" index="7" style="background:url('common/images/temp/lb8.png');background-size:100% 100%;"></div>
+			<!-- 翻转图（主图） -->
+			<div class="css4 flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="frontDiv"><img class="css5" src="common/images/temp/tu01.jpg" /></div>
+					<div class="backDiv"><img class="css5" src="common/images/temp/tu02.jpg"/></div>
+				</div>
+			</div>
+			<div class="css3" index="3" style="background:url('common/images/temp/lb1.png');background-size:100% 100%;"></div>
+			<div class="css3" index="6" style="background:url('common/images/temp/lb2.png');background-size:100% 100%;"></div>
+			<div class="css3" index="5" style="background:url('common/images/temp/lb3.png');background-size:100% 100%;"></div>
+			<div class="css3" index="4" style="background:url('common/images/temp/lb4.png');background-size:100% 100%;"></div>
+		</div>
+		<!-- 音乐 -->
+		<audio id="bgm" src="common/sound/wuold1.mp3" type="audio/mpeg" autoplay="autoplay" loop="loop"></audio> 
+		<!-- 歌词面板 -->
+		<div class="lyrTex" id="lrctextId" >
+			<div id="llrcId" >
+				<div id="lId0" class="lrcp lyric_now" style="transform:rotateX(0deg) translateZ(100.367px);">当你老了 - 莫文蔚 </div>
+				<div id="lId1" class="lrcp" style="transform:rotateX(-17deg) translateZ(100.367px);">当你老了 头发白了</div>
+				<div id="lId2" class="lrcp" style="transform:rotateX(-34deg) translateZ(100.367px);">睡意昏沉</div>
+				<div id="lId3" class="lrcp" style="transform:rotateX(-51deg) translateZ(100.367px);">当你老了 走不动了</div>
+				<div id="lId4" class="lrcp" style="transform:rotateX(-68deg) translateZ(100.367px);">炉火旁打盹 回忆青春</div>
+				<div id="lId5" class="lrcp" style="transform:rotateX(-85deg) translateZ(100.367px);">多少人曾爱你青春欢畅的时辰</div>
+				<div id="lId6" class="lrcp" style="transform:rotateX(-102deg) translateZ(100.367px);">爱慕你的美丽 假意或真心</div>
+				<div id="lId7" class="lrcp" style="transform:rotateX(-119deg) translateZ(100.367px);">只有一个人还爱你虔诚的灵魂</div>
+				<div id="lId8" class="lrcp" style="transform:rotateX(-136deg) translateZ(100.367px);">爱你苍老的脸上的皱纹</div>
+				<div id="lId9" class="lrcp" style="transform:rotateX(-153deg) translateZ(100.367px);">当你老了 眼眉低垂</div>
+				<div id="lId10" class="lrcp" style="transform:rotateX(-170deg) translateZ(100.367px);">灯火昏黄不定</div>
+				<div id="lId11" class="lrcp" style="transform:rotateX(-187deg) translateZ(100.367px);">风吹过来 你的消息</div>
+				<div id="lId12" class="lrcp" style="transform:rotateX(-204deg) translateZ(100.367px);">这就是我心里的歌</div>
+				<div id="lId13" class="lrcp" style="transform:rotateX(-221deg) translateZ(100.367px);">多少人曾爱你青春欢畅的时辰</div>
+				<div id="lId14" class="lrcp" style="transform:rotateX(-238deg) translateZ(100.367px);">爱慕你的美丽 假意或真心</div>
+				<div id="lId15" class="lrcp" style="transform:rotateX(-255deg) translateZ(100.367px);">只有一个人还爱你虔诚的灵魂</div>
+				<div id="lId16" class="lrcp" style="transform:rotateX(-272deg) translateZ(100.367px);">爱你苍老的脸上的皱纹</div>
+				<div id="lId17" class="lrcp" style="transform:rotateX(-289deg) translateZ(100.367px);">当你老了 眼眉低垂</div>
+				<div id="lId18" class="lrcp" style="transform:rotateX(-306deg) translateZ(100.367px);">灯火昏黄不定</div>
+				<div id="lId19" class="lrcp" style="transform:rotateX(-323deg) translateZ(100.367px);">当我老了 我真希望</div>
+				<div id="lId20" class="lrcp" style="transform:rotateX(-340deg) translateZ(100.367px);">这首歌是唱给你的</div>
+			</div>
+			<!-- 飘落树叶 -->
+				<img src="common/images/temp/leaf1.png" id="float_img1" class="float_img">
+				<img src="common/images/temp/leaf2.png" id="float_img2" class="float_img">
+				<img src="common/images/temp/leaf3.png" id="float_img3" class="float_img">
+				<img src="common/images/temp/leaf4.png" id="float_img4" class="float_img">
+				<img src="common/images/temp/leaf5.png" id="float_img5" class="float_img">
+				<img src="common/images/temp/leaf4.png" id="float_img6" class="float_img">
+		</div>
+		<!-- 点击爱心 -->
+		<div id="clickLove"></div>
+		<script type="text/javascript" src="common/js/index.js"></script>
+	</body>
+</html>

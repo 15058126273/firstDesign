@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animation</title>
+<script src="common/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<style>
+	.animation1{
+		width:100px;
+		height:100px;
+		background:red;
+		margin:100px; 
+		-webkit-transform-origin:50% 50%;
+		-webkit-box-shadow: 0 0 5px rgba(72, 106, 170, 0.8);
+	}
+	.animation1:hover{
+		-webkit-animation:shadow 1s infinite;
+	}
+	@keyframes shadow{
+		0%{-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);background:red;-webkit-transform:rotate(0deg) skew(0deg) scale(1) translate(0px,0px);}
+		50%{-webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);background:blue;-webkit-transform:rotate(20deg) skew(20deg) scale(2) translate(0px ,0px);}
+		100%{-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);background:red;-webkit-transform:rotate(0deg) skew(0deg) scale(1) translate(0px ,0px);}
+	}
+	
+	.b_div{width:100px;height:100px;overflow:hidden;position:relative;}
+	.s_div{height:100px;position:absolute;top:0px;left:0px;
+		 
+	
+	}
+	.dd{width:100px;height:100px;float:left;}
+	.dd1{background:red;}
+	.dd2{background:yellow;}
+	.dd3{background:grey;}
+	.dd4{background:blue;}
+	
+	@keyframes rundiv{
+		0%{-webkit-transform:translate(0px,0px);}
+		25%{-webkit-transform:translate(-100px,0px);}
+		50%{-webkit-transform:translate(-200px,0px);}
+		75%{-webkit-transform:translate(-300px,0px);}
+		100%{-webkit-transform:translate(0px,0px);}
+	}
+	
+</style>
+<script type="text/javascript">
+	$(function(){
+		var dd = $(".dd");
+		var i = dd.length;
+		$(".s_div").css({"width":100*i+"px","-webkit-animation":"rundiv "+i*4+"s infinite"});
+		
+		
+	})
+</script>
+
+<div class="animation1"></div>
+
+
+<div class="b_div">
+	<div class="s_div">
+		<div class="dd dd1"></div>
+		<div class="dd dd2"></div>
+		<div class="dd dd3"></div>
+		<div class="dd dd4"></div>
+	</div>
+</div>
+</body>
+</html>

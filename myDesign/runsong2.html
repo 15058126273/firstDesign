@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>run3d</title>
+<script src="common/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+</head>
+<body>
+<style>
+	.all3d{
+		perspective:800px;
+		width:500px;
+		margin:200px auto;
+	}
+	.lbdiv{
+		width:100px;
+	    height: 100px;
+	    margin:10px auto;
+	    transform-style: preserve-3d;
+	    backface-visibility:hidden;
+	}
+	.lbimg{
+		position:absolute;
+		width:100px;
+	}
+	
+</style>
+<div class="all3d">
+		<div class="lbdiv" id="lbdiv1" >
+			<img class="lbimg lbimg1" id="lbimg1" alt="" src="common/images/temp/lb1.png" style=""> 
+			<img class="lbimg lbimg1" id="lbimg2" alt="" src="common/images/temp/lb1.png" style="transform: rotateX(40deg) translateZ(140.44px);" >
+			<img class="lbimg lbimg1" id="lbimg3" alt="" src="common/images/temp/lb1.png" style="transform: rotateX(80deg) translateZ(140.44px);" >
+			<img class="lbimg lbimg1" id="lbimg4" alt="" src="common/images/temp/lb1.png" style="transform: rotateX(120deg) translateZ(140.44px);" >
+			<img class="lbimg lbimg1" id="lbimg5" alt="" src="common/images/temp/lb1.png"  style="transform: rotateX(160deg) translateZ(140.44px);">
+			<img class="lbimg lbimg1" id="lbimg6" alt="" src="common/images/temp/lb1.png" style="transform: rotateX(200deg) translateZ(140.44px);" >
+			<img class="lbimg lbimg1" id="lbimg7" alt="" src="common/images/temp/lb1.png" style="transform: rotateX(240deg) translateZ(140.44px);">
+			<img class="lbimg lbimg1" id="lbimg8" alt="" src="common/images/temp/lb1.png" style="transform: rotateX(280deg) translateZ(140.44px);"> 
+			<img class="lbimg lbimg1" id="lbimg9" alt="" src="common/images/temp/lb1.png" style="transform: rotateX(320deg) translateZ(140.44px);"> 
+		</div>
+</div>
+
+
+</body>
+</html>

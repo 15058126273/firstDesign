@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="common/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<script>
+
+
+
+</script>
+
+<style>
+	.css1{width:100px;height:100px;}
+	.lyrTex{height:118px;width:300px;position:relative;overflow:hidden;border:1px solid red;}
+	#llrcId{width:300px;position:absolute;top:36px;left:0px;text-align:center;}
+	.lyric_now{color:red;}
+	p{height:18px;margin-top:18px;padding:0px;}
+</style>
+<div class="lyrTex" id="lrctextId" >
+	<div id="llrcId" style="">
+		<p id="lId0" class="lrcp lyric_now">当你老了-莫文蔚 </p>
+		<p id="lId1" class="lrcp">当你老了 头发白了</p>
+		<p id="lId2" class="lrcp">睡意昏沉</p>
+		<p id="lId3" class="lrcp">当你老了 走不动了</p>
+		<p id="lId4" class="lrcp">炉火旁打盹 回忆青春</p>
+		<p id="lId5" class="lrcp">多少人曾爱你青春欢畅的时辰</p>
+		<p id="lId6" class="lrcp">爱慕你的美丽 假意或真心</p>
+		<p id="lId7" class="lrcp">只有一个人还爱你虔诚的灵魂</p>
+		<p id="lId8" class="lrcp">爱你苍老的脸上的皱纹</p>
+		<p id="lId9" class="lrcp">当你老了 眼眉低垂</p>
+		<p id="lId10" class="lrcp">灯火昏黄不定</p>
+		<p id="lId11" class="lrcp">风吹过来 你的消息</p>
+		<p id="lId12" class="lrcp">这就是我心里的歌</p>
+		<p id="lId13" class="lrcp">多少人曾爱你青春欢畅的时辰</p>
+		<p id="lId14" class="lrcp">爱慕你的美丽 假意或真心</p>
+		<p id="lId15" class="lrcp">只有一个人还爱你虔诚的灵魂</p>
+		<p id="lId16" class="lrcp">爱你苍老的脸上的皱纹</p>
+		<p id="lId17" class="lrcp">当你老了 眼眉低垂</p>
+		<p id="lId18" class="lrcp">灯火昏黄不定</p>
+		<p id="lId19" class="lrcp">当我老了 我真希望</p>
+		<p id="lId20" class="lrcp">这首歌是唱给你的</p>
+	</div>
+</div>
+<audio id="bgm" src="common/sound/wuold1.mp3" autoplay="autoplay" loop="loop"></audio>  
+<script type="text/javascript">
+//歌词时间
+var lrctime = [0.86,14.23,22,29.24,36.88,45.7,53,60.53,68,75.16,83.52,90.49,98.64,118.11,125.16,133.31,140.22,147.22,155.82,162.73,170.64];
+var audio = document.getElementById("bgm");
+var oriTop = 36;//初始定位 top
+var presentL = 0;//当前歌词行下标
+audio.ontimeupdate = function(e) {
+    //遍历所有歌词，看哪句歌词的时间与当然时间吻合
+    for (var i = 0; i < lrctime.length; i++) {
+    	console.log(this.currentTime);
+         if (this.currentTime < lrctime[i]) {
+            //显示到页面
+            if(presentL != i){
+	            $(".lrcp").removeClass("lyric_now");
+	            $("#lId"+(i-1)).addClass("lyric_now");
+	            $("#llrcId").css({"top":oriTop*(2-i)+"px"})
+            	presentL = i;
+            }
+            break;
+        };
+    };
+};
+</script>
+
+</body>
+</html>
