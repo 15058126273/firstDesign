@@ -44,8 +44,11 @@ a{
     width: 100%;
 }
 
+.listUl > a{
+    display: block;
+    margin: 0 auto 2px auto;
+}
 .listLi {
-    margin: 0px auto 2px auto;
     border-radius: 10px;
     background: #5DC65D;
     text-align: center;

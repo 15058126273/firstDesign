@@ -44,10 +44,11 @@ function flushLi() {
                 "height": liW * 0.2 + 'px',
                 "font-size": (liW * 0.2 * 0.6 > 5 ? (liW * 0.2 * 0.6) : 5) + 'px',
                 "line-height": (liW * 0.2 > 15 ? liW * 0.2 : 15) + 'px',
-
-            })
-            $(listLi[i]).find('a').css({
                 "color": 'rgb('+r+','+g+',200)'
+            })
+            $(listLi[i]).parent().css({
+                "width": liW + 'px',
+                "height": liW * 0.2 + 'px',
             })
 
         }
